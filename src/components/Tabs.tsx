@@ -9,9 +9,9 @@ interface TabProps {
 const TabsContainer = styled.div`
     display: flex;
     flex-direction: row;
-    border: 1px solid #ccc;
+    border: 1px solid #74C9E3;
     border-radius: 30px;
-    padding: 10px;
+    padding: 3px;
 `;
 
 const TabLink = styled.a`
