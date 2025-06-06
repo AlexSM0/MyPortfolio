@@ -20,7 +20,7 @@ const CardContainer = styled.div`
     background-color: black;
     border-radius: 10px;
     padding: 20px;
-    border: 1px solid ${(props: { color?: string }) => props.color === "blue" ? "#007BFF" : "#6F42C1"};
+    border: 1px solid ${(props: { color?: string }) => props.color === "blue" ? "#74C9E3" : "#6F42C1"};
     gap: 20px;
 `;
 

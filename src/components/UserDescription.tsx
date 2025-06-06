@@ -7,6 +7,11 @@ interface UserDescriptionProps {
     bio: string;
 }
 
+const UserDescriptionWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
 const UserName = styled.h2`
     font-family: "cyberdyne", sans-serif;
     font-size: 1.5em;
@@ -28,11 +33,11 @@ const UserBio = styled.p`
 const UserDescription: React.FC<UserDescriptionProps> = ({ name, bio, subtitle }) => {
     return (
         <>
-            <div style={{ margin: 0}}>
+            <UserDescriptionWrapper>
                 <UserName>{name}</UserName>
                 {subtitle && <UserSubtitle>{subtitle}</UserSubtitle>}
                 <UserBio>{bio}</UserBio>
-            </div>
+            </UserDescriptionWrapper>
         </>
     );
 }

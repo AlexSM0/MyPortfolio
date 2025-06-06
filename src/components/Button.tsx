@@ -2,19 +2,19 @@ import React from "react";
 import linkImg from "../assets/link.svg";
 import styled from "styled-components";
 
-interface ButtonProps{
+export interface ButtonProps{
     color?: "blue" | "purple";
     size?: "small" | "medium" | "large";
     onClick: () => void;
     image?: string;
     text: React.ReactNode;
     isLink?: boolean;
-    isCard?: boolean;
 }
 
 const StyledButton = styled.button<ButtonProps>`
     display: flex;
     flex-direction: flex-start;
+    white-space: nowrap;
     background-color: black;
     border-radius: 10px;
     cursor: pointer;
@@ -24,7 +24,8 @@ const StyledButton = styled.button<ButtonProps>`
     color: white;
     &:hover {opacity: 0.8;}
 
-    width: ${(props) => {
+    width: fit-content;
+    /* width: ${(props) => {
         switch (props.size) {
             case "small":
                 return "80px";
@@ -35,7 +36,7 @@ const StyledButton = styled.button<ButtonProps>`
             default:
                 return "120px";
         }
-    }};
+    }}; */
 
     height: ${(props) => {
         switch (props.size) {
