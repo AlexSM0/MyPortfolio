@@ -7,7 +7,7 @@ export interface ButtonProps{
     size?: "small" | "medium" | "large";
     onClick: () => void;
     image?: string;
-    text: React.ReactNode;
+    text?: React.ReactNode;
     isLink?: boolean;
 }
 
@@ -141,7 +141,7 @@ const Button: React.FC<ButtonProps> = ({ color = "blue", size = "medium", onClic
                 {image && (
                     <StyledImage src={image} alt="Button Icon" size={size} />
                 )}
-                {text}
+                {text && <span>{text}</span>}
                 <StyledImageLink src={linkImg} alt="Link Icon" size={size} />
             </StyledButton>
         );
@@ -151,7 +151,7 @@ const Button: React.FC<ButtonProps> = ({ color = "blue", size = "medium", onClic
             {image && (
                 <StyledImage src={image} alt="Button Icon" size={size} />
             )}
-            {text}
+            {text && <span>{text}</span>}
         </StyledButton>
     );
 }

@@ -71,7 +71,7 @@ const InfoItem: React.FC<InfoItemProps> = ({ title, titleImage, subtitle, tags, 
                 ))}
             </InfoItemTags>
             <InfoItemImage>
-                <ImageContent image={imageContent.image} buttons={imageContent.buttons} />
+                <ImageContent image={imageContent.image} buttons={imageContent.buttons} description={imageContent.description} />
             </InfoItemImage>
         </InfoItemContainer>
     );

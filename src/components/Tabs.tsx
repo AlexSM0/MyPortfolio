@@ -9,10 +9,12 @@ interface TabProps {
 const TabsContainer = styled.div`
     display: flex;
     flex-direction: row;
-    border: 1px solid #74C9E3;
     border-radius: 30px;
     padding: 3px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
 `;
+
 
 const TabLink = styled.a`
     font-size: 1.2em;
