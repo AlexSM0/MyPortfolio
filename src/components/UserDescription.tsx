@@ -28,6 +28,7 @@ const UserSubtitle = styled.h3`
 const UserBio = styled.p`
     font-size: 1em;
     color: #74C9E3;
+    
 `;
 
 const UserDescription: React.FC<UserDescriptionProps> = ({ name, bio, subtitle }) => {

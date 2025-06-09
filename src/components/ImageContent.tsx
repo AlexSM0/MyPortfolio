@@ -5,13 +5,14 @@ import Button, {type ButtonProps } from "./Button";
 export interface ImageContentProps {
     image: string;
     buttons?: ButtonProps[];
-
+    description: string;
 }
 
 const ImageContentContainer = styled.div`
-    width: 100%;
+    width: 500px;
     height: 600px;
     margin: 0 auto;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,11 +25,26 @@ const ImageContentContainer = styled.div`
     gap: 20px;
 `;
 
+const ImageWrapper = styled.div`
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden; 
+    margin-bottom: 10px;
+`;
+
+
 const ImageContentImage = styled.img`
     width: 100%;
     height: 300px;
     border-radius: 20px;
     margin-bottom: 10px;
+    transition: transform 0.4s ease-in-out; 
+    
+    &:hover {
+        transform: scale(1.20); 
+        cursor: pointer;
+    }
 `;
 
 const ImageContentButtons = styled.div`
@@ -37,10 +53,21 @@ const ImageContentButtons = styled.div`
     gap: 40px;
 `;
 
-const ImageContent: React.FC<ImageContentProps> = ({ image, buttons }) => {
+const ImageContentDescription = styled.p`
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+    white-space: normal;
+`;
+
+const ImageContent: React.FC<ImageContentProps> = ({ image, buttons, description }) => {
     return (
         <ImageContentContainer>
-            <ImageContentImage src={image} alt="Content" />
+            <ImageWrapper>
+                <ImageContentImage src={image} alt="Content" />
+            </ImageWrapper>
+            <ImageContentDescription>{description}</ImageContentDescription>
             {buttons && (
                 <ImageContentButtons>
                     {buttons.map((button, index) => (
@@ -48,6 +75,7 @@ const ImageContent: React.FC<ImageContentProps> = ({ image, buttons }) => {
                     ))}
                 </ImageContentButtons>
             )}
+            
         </ImageContentContainer>
     );
 };
