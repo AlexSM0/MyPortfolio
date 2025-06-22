@@ -85,6 +85,7 @@ export const ButtonsWrapper = styled.div`
   flex-direction: row;
   gap: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 export const SkillsWrapper = styled.div`
@@ -115,11 +116,14 @@ export const ContactWrapper = styled.div`
 export const TitleImageWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   margin-top: 40px;
   margin-bottom: 20px;
   width: 100%;
+  
+  @media (max-width: 769px) {
+    justify-content: center;
+  }
 `;
 
 
@@ -135,6 +139,7 @@ export const Title = styled.h2`
   font-family: 'cyberdyne', sans-serif;
   text-align: center;
   margin: 0;
+  white-space: nowrap;
 `;
 
 
