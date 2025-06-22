@@ -35,7 +35,6 @@ import githubLogo from "./assets/github.svg";
 import htmlImage from "./assets/html.svg";
 import linkedinLogo from "./assets/linkedin.svg";
 import listImage from "./assets/listImg.svg";
-import myCallClientImage from "./assets/myCCImage.jpg";
 import myccMobileImage from "./assets/myCCImage-mobile.jpg";
 import mysqlImage from "./assets/mysql.svg";
 import projectImage from "./assets/projectImage.svg";
