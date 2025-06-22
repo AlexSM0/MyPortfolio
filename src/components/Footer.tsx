@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { type ButtonProps } from "./Button";
+import Button from "./Button";
+
+interface FooterProps {
+    buttons?: ButtonProps[];
+}
 
 const FooterContainer = styled.footer`
     width: 100%;
@@ -11,16 +17,34 @@ const FooterContainer = styled.footer`
     color: white;
     font-size: 1.2em;
     font-family: 'cyberdyne', sans-serif;
+    white-space: nowrap;
+    flex-direction: row;
+    gap: 20px;
+    @media (max-width: 769px) {
+       flex-direction: column;
+    }
 `;
 
 const FooterText = styled.p`
     margin: 0;
+    @media (max-width: 769px) {
+       font-size: 0.9em;
+    }
 `;
 
-const Footer: React.FC = () => {
+const FooterButtons = styled.div`
+    display: flex;
+`;
+
+const Footer: React.FC<FooterProps> = ({ buttons }) => {
     return (
         <FooterContainer>
             <FooterText>2025 alexanderfuentes.dev</FooterText>
+            <FooterButtons>
+                {buttons?.map((button, index) => (
+                    <Button key={index} {...button} />
+                ))}
+            </FooterButtons>
         </FooterContainer>
     );
 }

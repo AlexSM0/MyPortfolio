@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 export interface TagProps {
     label: string;
-    color?: "blue" | "purple";
+    color?: "blue" | "purple" | "yellow";
     icon?: string;
 }
 
-const TagContainer = styled.div<{ color?: "blue" | "purple" }>`
+const TagContainer = styled.div<{ color?: "blue" | "purple" | "yellow" }>`
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color : ${({ color}) => 
-        color === "blue" ? "#74C9E3" : "#7F007E"};
+        color === "blue" ? "#74C9E3" : color === "purple" ? "#7F007E" : "#f7dc6f"};
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.434));
     width: fit-content;
     min-width: 150px;
@@ -20,6 +20,9 @@ const TagContainer = styled.div<{ color?: "blue" | "purple" }>`
     padding: 15px;
     border-radius: 15px;
     gap: 15px;
+    @media (max-width: 769px) {
+
+    }
 `;
 
 const TagLabel = styled.span`

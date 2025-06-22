@@ -36,6 +36,7 @@ import htmlImage from "./assets/html.svg";
 import linkedinLogo from "./assets/linkedin.svg";
 import listImage from "./assets/listImg.svg";
 import myCallClientImage from "./assets/myCCImage.jpg";
+import myccMobileImage from "./assets/myCCImage-mobile.jpg";
 import mysqlImage from "./assets/mysql.svg";
 import projectImage from "./assets/projectImage.svg";
 import pythonImage from "./assets/python.svg";
@@ -112,22 +113,26 @@ function App() {
     }
   ];
 
-  const tags: { label: string; color: "blue" | "purple"; icon: string }[] = [
+  const tags: { label: string; color: "blue" | "purple" | "yellow"; icon: string }[] = [
     { label: "Flask", color: "purple", icon: flaskImg },
-    { label: "Python", color: "blue", icon: pythonImage },
+    { label: "Python", color: "yellow", icon: pythonImage },
     { label: "React", color: "blue", icon: reactImage }
   ];
 
   const MyCButtons = [
-    { text: "Ckeck out!", color: "purple", size: "medium", isLink: true, onClick: () => console.log("View Project clicked!"), image: projectImage },
+    { text: "In maintenance...", color: "purple", size: "medium", isLink: true, onClick: () => console.log("View Project clicked!"), image: projectImage },
     { text: "Code", color: "purple", size: "medium", isLink: true, url: "https://github.com/AlexSM0/MyCallClient", image: githubLogo, onClick: () => {} }
   ] as const;
 
     const VToolButtons = [
-    { text: "Ckeck out!", color: "purple", size: "medium", isLink: true, onClick: () => console.log("View Project clicked!"), image: projectImage },
+    { text: "In maintenance...", color: "purple", size: "medium", isLink: true, onClick: () => console.log("View Project clicked!"), image: projectImage },
     { text: "Code", color: "purple", size: "medium", isLink: true, url: "https://github.com/AlexSM0/VersioningTool", image: githubLogo, onClick: () => {} }
   ] as const;
 
+  const footerButtons = [
+    { text: "Code", image: githubLogo, color: "blue" as const, isLink: true, url: "https://github.com/AlexSM0/MyPortfolio", onClick: () => {} }
+  ];
+  
   return (
     <>
       <GlobalFonts />
@@ -184,7 +189,7 @@ function App() {
               subtitle="An easy tool for patient-nurse communication"
               tags={tags}
               imageContent={{
-                image: myCallClientImage,
+                image: myccMobileImage,
                 buttons: [...MyCButtons],
                 description: (
                 <>
@@ -267,7 +272,7 @@ function App() {
           </ContactWrapper>
         </ContentWrapper>
       </Display>
-      <Footer/>
+      <Footer buttons={footerButtons} />
     </>
   )
 }

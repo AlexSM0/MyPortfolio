@@ -23,6 +23,10 @@ const ImageContentContainer = styled.div`
     box-shadow: 10px 10px 20px ;
     padding: 20px;
     gap: 20px;
+    @media (max-width: 769px) {
+        width: 100%;
+        height: fit-content;
+    }
 `;
 
 const ImageWrapper = styled.div`
@@ -51,6 +55,10 @@ const ImageContentButtons = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    @media (max-width: 769px) {
+       flex-direction: column;
+       align-items: center;
+    }
 `;
 
 const ImageContentDescription = styled.p`
