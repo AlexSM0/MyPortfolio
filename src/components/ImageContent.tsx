@@ -1,16 +1,16 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import styled from "styled-components";
 import Button, {type ButtonProps } from "./Button";
 
 export interface ImageContentProps {
     image: string;
     buttons?: ButtonProps[];
-    description: string;
+    description: ReactNode;
 }
 
 const ImageContentContainer = styled.div`
     width: 500px;
-    height: 600px;
+    height: fit-content;
     margin: 0 auto;
     justify-content: space-between;
     display: flex;
@@ -55,7 +55,7 @@ const ImageContentButtons = styled.div`
 
 const ImageContentDescription = styled.p`
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     margin-top: 10px;
     white-space: normal;

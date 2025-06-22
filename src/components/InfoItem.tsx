@@ -16,7 +16,8 @@ const InfoItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 `;
 
 const InfoItemTitle = styled.h2<{ titleColor?: string }>`
