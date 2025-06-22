@@ -86,6 +86,12 @@ export const ButtonsWrapper = styled.div`
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const SkillsWrapper = styled.div`
@@ -123,6 +129,7 @@ export const TitleImageWrapper = styled.div`
   
   @media (max-width: 769px) {
     justify-content: center;
+    margin-right: 10px;
   }
 `;
 

@@ -24,12 +24,20 @@ const InfoItemTitle = styled.h2<{ titleColor?: string }>`
     color: ${(props) => props.titleColor || 'white'};
     font-size: 2em;
     font-family: 'cyberdyne', sans-serif;
+
+    @media (max-width: 769px) {
+       font-size: 1.5em;
+    }
 `;
 
 const InfoItemImageTitle = styled.img`
     width: 50px;
     height: 50px;
     margin-right: 10px;
+
+    @media (max-width: 769px) {
+       
+    }
 `;
 
 const InfoItemTittleWrapper = styled.div`
@@ -42,13 +50,19 @@ const InfoItemTittleWrapper = styled.div`
 const InfoItemSubtitle = styled.p`
     color: white;
     font-size: 1.2em;
+    @media (max-width: 769px) {
+        font-size: 1em;
+    }
 `;
 
 const InfoItemTags = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px;
     margin: 10px 0;
+    @media (max-width: 769px) {
+        flex-direction: column;
+    }
 `;
 
 const InfoItemImage = styled.div`

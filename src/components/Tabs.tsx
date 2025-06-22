@@ -13,8 +13,10 @@ const TabsContainer = styled.div`
     padding: 3px;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
+    @media (max-width: 769px) {
+        width:90%;
+    }
 `;
-
 
 const TabLink = styled.a`
     font-size: 1.2em;
@@ -22,6 +24,11 @@ const TabLink = styled.a`
     cursor: pointer;
     color: white;
     text-decoration: none;
+    white-space: nowrap;
+    @media (max-width: 769px) {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
 `;
 
 const Tabs: React.FC<TabProps> = ({ labels, onClick }) => {
