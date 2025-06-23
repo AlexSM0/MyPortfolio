@@ -28,7 +28,7 @@ const StyledImage = styled.img<StyledImageProps>`
     width: ${(props) => {
         switch (props.size) {
             case "small":
-                return "80px";
+                return "60px";
             case "medium":
                 return "160px";
             case "large":
@@ -40,7 +40,7 @@ const StyledImage = styled.img<StyledImageProps>`
     height: ${(props) => {
         switch (props.size) {
             case "small":
-                return "80px";
+                return "60px";
             case "medium":
                 return "160px";
             case "large":

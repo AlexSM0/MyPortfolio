@@ -35,13 +35,13 @@ import githubLogo from "./assets/github.svg";
 import htmlImage from "./assets/html.svg";
 import linkedinLogo from "./assets/linkedin.svg";
 import listImage from "./assets/listImg.svg";
-import myccMobileImage from "./assets/myCCImage-mobile.jpg";
+import myCallClientImage from "./assets/myCCImage.jpg";
 import mysqlImage from "./assets/mysql.svg";
 import projectImage from "./assets/projectImage.svg";
 import pythonImage from "./assets/python.svg";
 import reactImage from "./assets/react.svg";
 import typescriptImage from "./assets/typescript.svg";
-import { useClipboard } from "./hooks/useClipboard"; // Ajusta la ruta según tu estructura
+import { useClipboard } from "./hooks/useClipboard";
 import userImg from "./assets/profilePic.png";
 import versioningImage from "./assets/versioningToolImage.jpg";
 import versioningLogo from "./assets/versioningLogo.svg";
@@ -188,7 +188,7 @@ function App() {
               subtitle="An easy tool for patient-nurse communication"
               tags={tags}
               imageContent={{
-                image: myccMobileImage,
+                image: myCallClientImage,
                 buttons: [...MyCButtons],
                 description: (
                 <>
