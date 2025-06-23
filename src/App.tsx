@@ -158,7 +158,7 @@ function App() {
                     Since then, I haven't stopped learning on my own. I've taken on personal projects, explored new technologies, and pushed myself to improve with every line of code.
                     What excites me the most is facing new challenges, understanding how modern applications are built, and figuring out how I can contribute with simple, effective solutions.
                     <br /><br />
-                    Today, I'm looking for an opportunity where I can continue to grow as a frontend developer.
+                    Today, I'm looking for an opportunity where I can continue to grow as a developer.
                     I'm especially interested in being part of a team where I can learn, contribute, and evolve.
                     My goal isn't just to master tools, but to become someone who understands the "why" behind the code,
                     who works well with others, and who doesn’t settle for “it works,” but aims for “it’s done right.”
@@ -206,7 +206,7 @@ function App() {
                   and set up request validation to ensure reliability.
                   <br /><br />
                   I styled the interface with styled‑components, used React Context and hooks for state management, and learned valuable lessons in 
-                  full‑stack real‑time communication, API design, and component reusability—skills I’m eager to apply in production‑grade healthcare systems.
+                  full‑stack real‑time communication, API design, and component reusability—skills.
                 </>
               )
               }}
