@@ -161,7 +161,7 @@ function App() {
                     Today, I'm looking for an opportunity where I can continue to grow as a developer.
                     I'm especially interested in being part of a team where I can learn, contribute, and evolve.
                     My goal isn't just to master tools, but to become someone who understands the "why" behind the code,
-                    who works well with others, and who doesn’t settle for it works,” but aims for “it’s done right.”
+                    who works well with others, and who doesn’t settle for it "works,” but aims for “it’s done right.”
                   </>
                 }
                 name="Alexander Fuentes Rodríguez"
